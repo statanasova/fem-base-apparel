@@ -2,5 +2,12 @@
 @import "base/breakpoints";
 @import "base/colors";
 @import "base/base";
+@import "base/sronly";
 
 /* COMPONENTS */
+@import "components/grid";
+@import "components/pattern";
+@import "components/header";
+@import "components/visual";
+@import "components/soon";
+@import "components/subscribe";

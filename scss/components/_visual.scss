@@ -1,0 +1,19 @@
+/* VISUAL */
+
+.visual {
+    background-color: orange;
+    grid-area: visual;
+
+    max-height: 250px;
+
+    @include breakpoint-up(xsmall) {
+        max-height: unset;
+    }
+
+    &__image {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

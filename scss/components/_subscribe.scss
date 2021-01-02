@@ -1,0 +1,77 @@
+.subscribe {
+
+    button, input, select, textarea {
+        font-family: inherit;
+        font-size: 0.875rem;
+        border-radius: 3rem;
+
+        &:focus {
+            outline: 2px dotted var(--desaturated-red);
+            // outline-offset: 5px;
+        }
+        
+    }
+
+    &__group {
+        position: relative;
+    }
+
+    &__email {
+        padding: .9rem 7rem .75rem 1.2rem;
+        // opacity: .5;
+        background-color: transparent;
+        color: var(--desaturated-red);
+        border: 1px solid var(--desaturated-red);
+        width: 100%;
+
+        &.email--error {
+            border: none;
+            box-shadow: 0px 0px 0px 2px rgba(180,0,0,0.75);
+        }
+        
+    }
+
+    &__error-icon {
+        position: absolute;
+        top: 25%;
+        right: 5rem;
+    }
+
+    &__submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: var(--linear-gradient-2-fallback);
+        background: var(--linear-gradient-2);
+        color: var(--desaturated-red);
+        border: none;
+        width: 4.5rem;
+        
+        box-shadow: 0px 15px 40px -10px rgba(248,150,150,.85);
+        // box-shadow: 0px 15px 40px -10px rgba(0,0,0,1);
+
+        &:hover {
+            background: var(--linear-gradient-3-fallback);
+            background: var(--linear-gradient-3);
+            box-shadow: 0px 15px 40px -10px rgba(248,150,150,1);
+            cursor: pointer;
+        }
+
+    }
+
+    &__error-text {
+        padding: 0 1.2rem;
+        font-size: 0.75rem;
+        color: var(--soft-red);
+    }
+}
+
+
+//         <div class="subscribe__group">
+//           <label for="subscribeEmail" class="sr-only">Email Address</label>
+//           <input id="subscribeEmail" type="email" class="subscribe__email" placeholder="Email Address">
+//           <button id="soonSubmitButton" class="subscribe__submit">
+//             <img src="/images/icon-arrow.svg" alt="arrow icon" aria-hidden="true">
+//           </button>
+//         </div>

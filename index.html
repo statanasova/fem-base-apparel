@@ -14,6 +14,7 @@
 
   <!-- challenge styles -->
   <link rel="stylesheet" href="css/main.css">
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -31,19 +32,53 @@
 
 <body>
 
-  We're coming soon
+  <main class="main">
+    <div class="pattern"></div>
+    <header class="header">
+      <img src="/images/logo.svg" alt="BASE APPAREL logo" class="header__logo">
+    </header>
 
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <section class="visual">
+      <picture class="visual__picture">
+        <source srcset="/images/hero-desktop.jpg" media="(min-width: 500px)" />
+        <img class="visual__image" src="/images/hero-mobile.jpg"
+          alt="Female model wearing a short sleeved cotton shirt in orange" />
+      </picture>
+    </section>
 
-  Email Address
+    <section class="soon">
+      <h1 class="soon__heading">We're <span>coming</span> <span>soon</span></h1>
+      <p class="soon__text">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  <footer>
+      <form id="subscribeForm" class="subscribe" action="">
+        <div class="subscribe__group">
+          <label for="subscribeEmail" class="sr-only">Email Address</label>
+
+          <input id="subscribeEmail" type="email" class="subscribe__email email--error" placeholder="Email Address">
+
+          <img class="subscribe__error-icon" src="/images/icon-error.svg" alt="error" aria-hidden="true">
+
+          <button id="soonSubmitButton" class="subscribe__submit" type="submit">
+            <img src="/images/icon-arrow.svg" alt="arrow icon" aria-hidden="true">
+          </button>
+
+        </div>
+
+        <p class="subscribe__error-text">Please provide a valid email</p>
+      </form>
+    </section>
+
+  </main>
+
+
+
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

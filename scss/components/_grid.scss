@@ -1,0 +1,29 @@
+/* GRID */
+
+.main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+
+    grid-template-areas: 
+            "header"
+            "visual"
+            "soon";
+
+    background: var(--linear-gradient-1-fallback);
+    background: var(--linear-gradient-1);
+
+    @include breakpoint-up(small){
+        
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: min-content 1fr;
+
+        grid-template-areas:
+            "header visual"
+            "soon visual";
+        }
+
+    
+
+}

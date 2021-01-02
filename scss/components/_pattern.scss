@@ -1,0 +1,14 @@
+/* PATTERN */
+
+.pattern {
+
+    @include breakpoint-up(small){
+        
+        background-image: url('/images/bg-pattern-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+   
+    }
+}
