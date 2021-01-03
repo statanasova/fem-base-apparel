@@ -4,7 +4,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content;
+    grid-template-rows: repeat(2, max-content) 1fr;
 
     grid-template-areas: 
             "header"
@@ -16,14 +16,17 @@
 
     @include breakpoint-up(small){
         
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr minmax(360px, 1fr);
         grid-template-rows: min-content 1fr;
 
         grid-template-areas:
             "header visual"
             "soon visual";
         }
-
+    
+    @include breakpoint-up(large) {
+        grid-template-columns: 2fr minmax(610px, 1fr);
+    }
     
 
 }

@@ -3,11 +3,62 @@
 .header {  
     grid-area: header;
 
-    padding: 2rem;
+    &__content {
+        padding: 2rem 0;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+
+        @include breakpoint-up(small){
+            padding: 3rem 0 0;
+        }
+
+        @include breakpoint-up(medium){  
+            padding: 4rem 0 0;
+            max-width: 490px;
+        }
+        
+        
+        
+        
+        // margin: auto;
+        //     padding: 2rem 0;
+        //     max-width: 260px; 
+
+        // @include breakpoint-up(tiny){
+        //     padding: 2rem 0;
+        //     max-width: 314px; 
+        // }
+
+        
+        // @include breakpoint-up(xsmall){
+        //     max-width: 700px;
+        //     padding: 2rem; 
+        // }
+        
+        // @include breakpoint-up(small){
+        //     padding: 3rem 0;
+        //     max-width: 340px;
+        // }
+
+        // @include breakpoint-up(medium){ 
+        //     max-width: 490px;
+        //     padding: 4rem 0 0;
+        // }
+    }
+
 
     &__logo {
         display: flex;
         max-width: 100px;
-        
+
+        @include breakpoint-up(small){
+            max-width: 130px;
+        }
+
+        @include breakpoint-up(medium){
+            max-width: 160px;
+        }
     }
+    
 }

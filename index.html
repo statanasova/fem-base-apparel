@@ -35,7 +35,9 @@
   <main class="main">
     <div class="pattern"></div>
     <header class="header">
-      <img src="/images/logo.svg" alt="BASE APPAREL logo" class="header__logo">
+      <div class="header__content">
+        <img src="/images/logo.svg" alt="BASE APPAREL logo" class="header__logo">
+      </div>
     </header>
 
     <section class="visual">
@@ -47,31 +49,34 @@
     </section>
 
     <section class="soon">
-      <h1 class="soon__heading">We're <span>coming</span> <span>soon</span></h1>
-      <p class="soon__text">Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <div class="soon__content">
+        <h1 class="soon__heading">We're <span>coming</span> <span>soon</span></h1>
+        <p class="soon__text">Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      <form id="subscribeForm" class="subscribe" action="">
-        <div class="subscribe__group">
-          <label for="subscribeEmail" class="sr-only">Email Address</label>
+        <form id="subscribeForm" class="subscribe" action="" novalidate>
+          <div class="subscribe__group">
+            <label for="subscribeEmail" id="subscribeEmailLabel" class="sr-only">Email Address</label>
 
-          <input id="subscribeEmail" type="email" class="subscribe__email email--error" placeholder="Email Address">
+            <input id="subscribeEmail" type="email" class="subscribe__email-input" placeholder="Email Address">
 
-          <img class="subscribe__error-icon" src="/images/icon-error.svg" alt="error" aria-hidden="true">
+            <img id="subscribeErrorIcon" class="subscribe__error-icon" src="/images/icon-error.svg" alt="error"
+              aria-hidden="true">
 
-          <button id="soonSubmitButton" class="subscribe__submit" type="submit">
-            <img src="/images/icon-arrow.svg" alt="arrow icon" aria-hidden="true">
-          </button>
+            <button id="subscribeSubmit" class="subscribe__submit" type="submit">
+              <img src="/images/icon-arrow.svg" alt="arrow icon" aria-hidden="true">
+            </button>
 
-        </div>
+          </div>
 
-        <p class="subscribe__error-text">Please provide a valid email</p>
-      </form>
+          <div role="alert">
+            <p id="subscribeErrorText" class="subscribe__error-text">Please provide a valid email</p>
+          </div>
+        </form>
+      </div>
     </section>
 
   </main>
-
-
 
   <!-- <footer>
     <p class="attribution">
@@ -79,6 +84,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

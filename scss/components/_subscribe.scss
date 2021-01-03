@@ -1,13 +1,17 @@
 .subscribe {
 
-    button, input, select, textarea {
+    @include breakpoint-up(medium) {
+        width: 90%;
+    }
+
+    button, input {
         font-family: inherit;
         font-size: 0.875rem;
         border-radius: 3rem;
 
         &:focus {
             outline: 2px dotted var(--desaturated-red);
-            // outline-offset: 5px;
+            outline-offset: 1px;
         }
         
     }
@@ -16,17 +20,22 @@
         position: relative;
     }
 
-    &__email {
-        padding: .9rem 7rem .75rem 1.2rem;
-        // opacity: .5;
+    &__email-input {
+        padding: .9rem 5rem .75rem 1.2rem;
         background-color: transparent;
-        color: var(--desaturated-red);
-        border: 1px solid var(--desaturated-red);
+        color: var(--dark-grayish-red);
+        border: 1px solid var(--input-border);
         width: 100%;
+        line-height: 1.5;
 
-        &.email--error {
-            border: none;
-            box-shadow: 0px 0px 0px 2px rgba(180,0,0,0.75);
+        &::placeholder {
+            color: var(--input-border);
+        } 
+
+        @include breakpoint-up(medium){
+            font-size: 1rem;
+            line-height: 2;
+            padding: .9rem 7rem .75rem 2rem;
         }
         
     }
@@ -34,7 +43,8 @@
     &__error-icon {
         position: absolute;
         top: 25%;
-        right: 5rem;
+        right: 7rem;
+        opacity: 0;
     }
 
     &__submit {
@@ -46,7 +56,7 @@
         background: var(--linear-gradient-2);
         color: var(--desaturated-red);
         border: none;
-        width: 4.5rem;
+        width: 4rem;
         
         box-shadow: 0px 15px 40px -10px rgba(248,150,150,.85);
         // box-shadow: 0px 15px 40px -10px rgba(0,0,0,1);
@@ -58,20 +68,35 @@
             cursor: pointer;
         }
 
+        @include breakpoint-up(medium){
+            width: 6rem;
+        }
+
     }
 
     &__error-text {
         padding: 0 1.2rem;
         font-size: 0.75rem;
         color: var(--soft-red);
+        display: none;
+    }
+}
+
+.subscribe--error {
+
+    .subscribe__email-input {
+        padding-right: 9.5rem;
+        border-color: transparent;
+        box-shadow: 0px 0px 0px 2px #E78F8E;
+    }
+
+
+    .subscribe__error-icon {
+        opacity: 1;
+    }
+    .subscribe__error-text {
+        display: block;
     }
 }
 
 
-//         <div class="subscribe__group">
-//           <label for="subscribeEmail" class="sr-only">Email Address</label>
-//           <input id="subscribeEmail" type="email" class="subscribe__email" placeholder="Email Address">
-//           <button id="soonSubmitButton" class="subscribe__submit">
-//             <img src="/images/icon-arrow.svg" alt="arrow icon" aria-hidden="true">
-//           </button>
-//         </div>
