@@ -122,7 +122,7 @@ h1 {
 
 @media (min-width: 992px) {
   .header__content {
-    padding: 4rem 0 0;
+    padding: 4rem 0 1rem;
     max-width: 490px;
   }
 }
@@ -211,7 +211,6 @@ h1 {
   color: var(--desaturated-red);
   margin-bottom: 1rem;
   line-height: 1;
-  margin-top: -1.45rem;
 }
 
 .soon__heading > span {
@@ -231,12 +230,11 @@ h1 {
 
 @media (min-width: 992px) {
   .soon__heading {
-    font-size: 3.875rem;
-    letter-spacing: 1.3rem;
-    margin-bottom: 1.2rem;
+    font-size: 4rem;
+    letter-spacing: 1.1rem;
+    margin-bottom: 1.1rem;
     text-align: unset;
     line-height: 1.1;
-    margin-top: -1.85rem;
   }
 }
 
@@ -257,7 +255,7 @@ h1 {
     text-align: unset;
     line-height: 1.8;
     max-width: 27.5rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.1rem;
   }
 }
 
@@ -306,8 +304,14 @@ h1 {
 .subscribe__error-icon {
   position: absolute;
   top: 25%;
-  right: 7rem;
+  right: 5rem;
   opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .subscribe__error-icon {
+    right: 7rem;
+  }
 }
 
 .subscribe__submit {
@@ -340,7 +344,7 @@ h1 {
   padding: 0 1.2rem;
   font-size: 0.75rem;
   color: var(--soft-red);
-  display: none;
+  opacity: 0;
 }
 
 .subscribe--error .subscribe__email-input {
@@ -354,6 +358,6 @@ h1 {
 }
 
 .subscribe--error .subscribe__error-text {
-  display: block;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

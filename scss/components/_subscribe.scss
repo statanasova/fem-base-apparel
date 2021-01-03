@@ -43,8 +43,12 @@
     &__error-icon {
         position: absolute;
         top: 25%;
-        right: 7rem;
+        right: 5rem;
         opacity: 0;
+
+        @include breakpoint-up(medium) {
+            right: 7rem;
+        }
     }
 
     &__submit {
@@ -78,7 +82,7 @@
         padding: 0 1.2rem;
         font-size: 0.75rem;
         color: var(--soft-red);
-        display: none;
+        opacity: 0;
     }
 }
 
@@ -95,7 +99,7 @@
         opacity: 1;
     }
     .subscribe__error-text {
-        display: block;
+        opacity: 1;
     }
 }
 
