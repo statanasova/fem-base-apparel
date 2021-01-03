@@ -4,10 +4,10 @@
     background-color: var(--desaturated-red);
     grid-area: visual;
 
-    max-height: 250px;
+    max-height: 15.625rem;
 
     @include breakpoint-up(xsmall) {
-        max-height: 420px;
+        max-height: 26.25rem;
     }
 
     @include breakpoint-up(small) {

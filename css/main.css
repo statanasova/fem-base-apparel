@@ -148,12 +148,12 @@ h1 {
 .visual {
   background-color: var(--desaturated-red);
   grid-area: visual;
-  max-height: 250px;
+  max-height: 15.625rem;
 }
 
 @media (min-width: 500px) {
   .visual {
-    max-height: 420px;
+    max-height: 26.25rem;
   }
 }
 
@@ -181,24 +181,24 @@ h1 {
   grid-area: soon;
   display: flex;
   align-items: center;
-  min-height: 440px;
+  min-height: 27.5rem;
 }
 
 @media (min-width: 768px) {
   .soon {
-    min-height: 550px;
+    min-height: 34.375rem;
   }
 }
 
 .soon__content {
   margin: 0 auto;
   width: 80%;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 @media (min-width: 992px) {
   .soon__content {
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 }
 
@@ -256,7 +256,7 @@ h1 {
   .soon__text {
     text-align: unset;
     line-height: 1.8;
-    max-width: 440px;
+    max-width: 27.5rem;
     margin-bottom: 2.2rem;
   }
 }
