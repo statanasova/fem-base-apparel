@@ -14,5 +14,5 @@ Your users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
-## Solution
-[Link to live solution](#)
+## Live Solution
+[Base Apparel Solution](https://base-apparel.fem.statanasova.com)

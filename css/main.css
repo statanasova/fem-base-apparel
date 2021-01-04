@@ -199,6 +199,7 @@ h2 {
 @media (min-width: 992px) {
   .soon__content {
     max-width: 31.25rem;
+    margin-top: -1.3rem;
   }
 }
 
